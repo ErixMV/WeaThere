@@ -1,0 +1,248 @@
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #6DD5FA;
+  --bg-terciary: #2980B9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: -webkit-linear-gradient(to top, var(--bg-primary), var(--bg-secondary), var(--bg-terciary)) !important;
+  background: linear-gradient(to top, var(--bg-primary), var(--bg-secondary), var(--bg-terciary)) !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 80px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100vw;
+}
+
+/* End Header */
+
+/* Search Container */
+.search-container {
+  display: flex;
+  flex-flow: row;
+  margin: 20px auto 10px;
+  width: 50vw;
+}
+
+.search-container input {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* End Search */
+
+/* Error */
+.error {
+  color: rgb(238, 30, 30);
+  text-align: center;
+}
+
+/* End Error */
+
+/* Styles in Media Queries */
+.weather-container {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* End Styles in Media Queries */
+
+/* WeatherBody */
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  width: 200px;
+}
+
+.card-header {
+  font-weight: 700;
+  line-height: 3;
+}
+
+.icon {
+  width: 55px;
+}
+
+.high-temp-container,
+.low-temp-container {
+  line-height: 2;
+}
+
+.high-temp-container {
+  font-weight: 700;
+}
+
+.low-temp-container {
+  font-weight: 600;
+}
+
+.flex-full-width {
+  flex-basis: 100%;
+}
+
+/* End WeatherBody */
+
+
+svg {
+  fill: #A0A0A0 !important
+}
+
+/* Dropdown Styles */
+.ap-dataset-places {
+  color: #111111
+}
+
+/* End Dropdown */
+
+/* Info Component */
+.info {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);;
+  font-weight: 400;
+  color: #222;
+  line-height: 2;
+  padding: 10px 0px 20px;
+  text-align: center;
+  width: 100vw;
+}
+
+.info p {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+.info .src-button-container {
+  margin-top: 15px;
+}
+
+.src-button {
+  background: rgba(255, 255, 255, 0.9);
+  border: .5px solid #bbb;
+  padding: 0.6rem;
+  text-decoration: none;
+  color: #222222
+}
+
+.src-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: .5s;
+}
+
+.src-button span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.src-button:hover span {
+  padding-right: 15px;
+}
+
+.src-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End Info Component */
+
+/* Footer */
+.footer {
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  bottom: 0;
+  display: flex;
+  flex-flow: row;
+  font-weight: 500;
+  height: 40px;
+  justify-content: space-around;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+}
+
+.footer a {
+  margin: auto 10px
+}
+
+.footer a:hover {
+  transform: translateY(-5%);
+}
+
+.footer .contact-icons {
+  display: flex;
+}
+
+/* End Footer */
+
+/* Media Queries */
+
+@media (max-width: 999px) {
+  .info .src-button-container {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 799px) {
+  .footer {
+    height: 80px;
+  }
+
+  .footer a {
+    margin: auto 5px;
+  }
+
+  .search-container {
+    width: 90vw;
+  }
+
+  .info {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+  }
+}
