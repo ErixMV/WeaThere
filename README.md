@@ -1,30 +1,62 @@
-# Rando
+# WeaThere
 
-A password generator built with React and Express.
+A simple project that shows the weather forecast from almost every city.
 
-This is a minimal demo of using Create React App to bootstrap a React project, connect the React app to an Express backend, and deploy the whole thing to Heroku.
+[Live Demo](https://weathere-app.herokuapp.com)
 
-Read the blog post: [Create React App with Express in
-Production](https://daveceddia.com/create-react-app-express-production/)
+## Table of Contents
 
-## Prerequisites
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
 
-You need to [sign up](https://heroku.com/) for a Heroku account if you don't already have one, and install the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli). (On a Mac with Homebrew, just run `brew install heroku`).
+## About the Project
+This project was started in order to improve my skills using APIs and data management. The initial version has a very simple layout with only temperature data. In future versions, more data will be added and layout will be improved.
 
-## Deploy to Heroku
+### Built With
+The project is totally made in [React](https://es.reactjs.org).
 
-To deploy:
 
-1. Clone this repo.
-2. Inside the repo directory, run `heroku create` (requires [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli)).
-3. Run `git push heroku master` to simultaneously deploy the frontend + backend to Heroku.
+The retrived data come from:<br />
+[Algolia Places](https://community.algolia.com/places/) for cities.<br />
+[Weatherbit](https://www.weatherbit.io) for weather forecast.
 
-### Using NPM
+## Usage
+The search input will display cities as suggestions in a dropdown depending on input's current value. Select a city and the weather forecast will be displayed.
 
-Check out the `npm` branch if you're not using Yarn:
+You can get the forecast from your current position by clicking the pin on the right side of the search input.
 
-`git checkout npm`
+## Roadmap
 
-And then once on that branch, the deploy command is:
+This is a list of future implementations:
 
-`git push heroku npm:master`
+* Toggle between °C and F.
+* Display from a selected day (today by default): Hourly forecast, pressure, humidity and rain probability.
+* Layout improvement.
+* Dark Mode
+
+See the [open issues](https://github.com/ErixMV/WeaThere/issues) for a list of proposed features (and known issues).
+
+## Contributing
+
+Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Added some new feature'`)
+4. Push to the Branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Erix Mamani Villacresis - [erixmv022@gmail.com](mailto:erixmv022@gmail.com) - [LinkedIn](https://www.linkedin.com/in/erixmamani/)
+
+Project Link: [https://github.com/ErixMV/WeaThere](https://github.com/ErixMV/WeaThere)
