@@ -4,8 +4,8 @@ const axios = require("axios");
 const bodyParser = require("body-parser");
 
 //! Uncomment the next two lines for local running
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
