@@ -1,5 +1,7 @@
-// global.js
-
+// Global.js
+/*
+  Global styles for app
+*/
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`

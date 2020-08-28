@@ -1,4 +1,7 @@
-// theme.js
+// Theme.js
+/*
+    Styles file for light and dark theme.
+*/
 export const lightTheme = {
     body: '#E2E2E2',
     text: '#363537',

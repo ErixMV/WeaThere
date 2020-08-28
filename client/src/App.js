@@ -7,7 +7,7 @@ import axios from "axios";
 import { placesConf, configureConf } from "./config/places";
 import { lightTheme, darkTheme } from './theme';
 import { GlobalStyles } from './global';
-import "./config/enviroment";
+// import "./config/enviroment";
 
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
@@ -17,11 +17,11 @@ import Footer from "./components/Footer";
 
 function App() {
 
+  // Hooks
   const [theme, setTheme] = useState(true);
   const [forecast, setForecast] = useState(null);
   const [city, setCity] = useState("");
-  const [error, setError] = useState(null)
-  // const [placesAutocomplete, setPlacesAutocomplete] = useState(null);
+  const [error, setError] = useState(null);
 
   const ref = createRef();
   const toggleTheme = () => setTheme(!theme);
@@ -36,8 +36,6 @@ function App() {
 
     const { current } = ref;
 
-    // const { data } = await axios.post("/api/cities");
-
     const instancePlacesAutocomplete = await places({
       // appId: data.id,
       // apiKey: data.apikey,
@@ -45,6 +43,8 @@ function App() {
       container: current,
     }).configure(configureConf);
 
+    // Places events
+    //Change
     await instancePlacesAutocomplete.on('change', ({ suggestion }) => {
       setCity(suggestion.value);
       instancePlacesAutocomplete.close();
@@ -52,6 +52,7 @@ function App() {
       submitHandler(instancePlacesAutocomplete, suggestion.latlng);
     });
 
+    //Locate
     await instancePlacesAutocomplete.on('locate', () => {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(({ coords }) => {
@@ -74,20 +75,20 @@ function App() {
       }
     });
 
+    // Clear
     await instancePlacesAutocomplete.on('clear', () => {
       instancePlacesAutocomplete.setVal("");
       setCity("");
       setForecast(false);
     });
 
+    // Error
     await instancePlacesAutocomplete.on('error', () => {
       console.log("error");
 
       instancePlacesAutocomplete.setVal("");
       instancePlacesAutocomplete.close();
     });
-
-    // setPlacesAutocomplete(instancePlacesAutocomplete);
 
   };
 
@@ -99,8 +100,9 @@ function App() {
     return (
       <WeatherBody displayType={componentClass} key={index} i={index} day={day} icon={weather.icon} highTemp={high_temp} lowTemp={low_temp} />
     );
-  }
+  };
 
+  // Responsive rendering functions
   const renderOneRow = (dayForecast, index) => getWeatherBody(dayForecast, index, "d-large");
 
   const renderTwoRows = (dayForecast, index) => getWeatherBody(dayForecast, index, "d-medium");

@@ -1,3 +1,5 @@
+// Component: Weather Card
+
 import React from "react";
 
 const WeatherBody = ({ day, icon, highTemp, lowTemp, displayType, i }) => {

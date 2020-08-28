@@ -1,3 +1,5 @@
+// Component: Input for Algolia API search bar.
+
 import React, { forwardRef } from "react";
 
 const SearchBar = forwardRef(({ city, changeHandler, submitHandler }, ref) => {

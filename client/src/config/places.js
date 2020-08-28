@@ -1,3 +1,5 @@
+// Places API Config File
+
 export const placesConf = {
     accessibility: {
         pinButton: {

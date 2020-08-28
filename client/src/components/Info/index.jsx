@@ -1,3 +1,5 @@
+// Component: Project Info
+
 import React from "react";
 
 const Info = () => {

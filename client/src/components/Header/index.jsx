@@ -1,3 +1,5 @@
+// Component: Header Bar
+
 import React from "react";
 
 const Header = () => {
