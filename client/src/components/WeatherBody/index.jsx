@@ -15,7 +15,7 @@ const WeatherBody = ({ day, icon, highTemp, lowTemp, displayType, i }) => {
                 {days[day]}
             </div>
             <div className="card-body">
-                <img className="icon" src={srcLogo} alt="hey" />
+                <img className="icon" src={srcLogo} alt="weather-image" />
             </div>
             <div className="card-footer">
                 <div className="high-temp-container">
