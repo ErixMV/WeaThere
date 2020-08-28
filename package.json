@@ -1,5 +1,5 @@
 {
-  "name": "rando",
+  "name": "weathere",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,5 +12,16 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
-  }
+  },
+  "description": "A simple project that shows the weather forecast from almost every city.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErixMV/WeaThere.git"
+  },
+  "author": "ErixMV",
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/ErixMV/WeaThere/issues"
+  },
+  "homepage": "https://github.com/ErixMV/WeaThere#readme"
 }
